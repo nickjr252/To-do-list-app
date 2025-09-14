@@ -373,7 +373,8 @@
                 
                 filteredTasks.forEach(task => {
                     const taskElement = document.createElement('div');
-                    taskElement.className = task-item ${task.completed ? 'completed' : ''};
+                   // taskElement.className = task-item ${task.completed ? 'completed' : ''};
+                    taskElement.className= `task-item ${task.completed ? 'completed : ''}
                     
                     taskElement.innerHTML = `
                         <input type="checkbox" class="task-checkbox" ${task.completed ? 'checked' : ''}>
@@ -405,11 +406,14 @@
                 const totalTasks = tasks.length;
                 const completedTasks = tasks.filter(task => task.completed).length;
                 
-                totalTasksSpan.textContent = Total: ${totalTasks} task${totalTasks !== 1 ? 's' : ''};
-                completedTasksSpan.textContent = Completed: ${completedTasks} task${completedTasks !== 1 ? 's' : ''};
+                //totalTasksSpan.textContent = Total: ${totalTasks} task${totalTasks !== 1 ? 's' : ''};
+                //completedTasksSpan.textContent = Completed: ${completedTasks} task${completedTasks !== 1 ? 's' : ''};
+
+                totalTasksSpan.textContent = `Total: ${totalTasks} task${totalTasks !== 1 ? 's' : ''}`;
+completedTasksSpan.textContent = `Completed: ${completedTasks} task${completedTasks !== 1 ? 's' : ''}`;
             }
         });
     </script>
 </body>
-
 </html>
+
